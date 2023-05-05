@@ -1,0 +1,6 @@
+.container {
+    background-image: url(../assets/images/home-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position-y: -100px;
+}

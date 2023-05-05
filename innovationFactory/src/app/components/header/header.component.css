@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+} 
+
+header{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    margin-left: 20px;
+}
+
+.header-language{
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-right: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+#loginBtn{
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+#header-language-icon{
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: -5px;
+}

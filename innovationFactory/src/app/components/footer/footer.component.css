@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECFBFA;
+}
+
+footer .sec{
+    width: 30%;
+}
+
+footer .sec:nth-child(1), .sec:nth-child(2){
+    padding-left: 40px;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer ul li{
+    margin-left: 10px;
+}

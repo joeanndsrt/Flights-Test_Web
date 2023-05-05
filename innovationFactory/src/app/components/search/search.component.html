@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="search-container">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="tabs">
+      <mat-tab class="tab">
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon">flight</mat-icon>
+          Flights
+        </ng-template>
+        <div class="btn-group">
+            <select class="select-class">
+                <option value="Business">Business</option>
+                <option value="Economy">Economy</option>
+              </select>
+          <mat-button-toggle-group name="trip" aria-label="Font Style" class="trip">
+            <mat-button-toggle value="One Way" id="trip-btn-left">One Way</mat-button-toggle>
+            <mat-button-toggle value="Round Trip" id="trip-btn-right">Round Trip</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </mat-tab>
+      <mat-tab class="tab">
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon"> hotel</mat-icon>
+          Hotels
+        </ng-template>
+        Content 1
+      </mat-tab>
+      <mat-tab class="tab">
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon"> directions_car</mat-icon>
+          Car Rental
+        </ng-template>
+        Content 1
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
