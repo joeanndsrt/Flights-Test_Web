@@ -25,6 +25,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PackagesComponent } from './components/packages/packages.component';
 import { PackagesCarouselComponent } from './components/packages-carousel/packages-carousel.component';
+import { FeaturedComponent } from './components/featured/featured.component';
+import { PicColumnComponent } from './components/pic-column/pic-column.component';
 
 
 
@@ -42,7 +44,9 @@ import { PackagesCarouselComponent } from './components/packages-carousel/packag
     PlacesComponent,
     CarouselComponent,
     PackagesComponent,
-    PackagesCarouselComponent
+    PackagesCarouselComponent,
+    FeaturedComponent,
+    PicColumnComponent
   ],
   imports: [
     BrowserModule,

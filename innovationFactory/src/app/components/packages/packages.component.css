@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 150px;
+  background-color: #e7f8ff;
+  padding: 30px;
+}
+
+.contents-container {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.carousel-container {
+  flex: 1;
+}
+
+.text-container {
+  margin-bottom: 30px;
+  max-width: 91%;
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.text-container h1 {
+  /* display: flex;
+  font-size: 2.3rem;
+  max-width: 50%; */
+  font-size: 2.3rem;
+  max-width: 25%;
+}
+
+.text-container p {
+  color: #404d52b7;
+  max-width: 50%;
+}

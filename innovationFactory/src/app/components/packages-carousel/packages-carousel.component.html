@@ -1,29 +1,65 @@
-<!-- <p-carousel
+<p-carousel
   [value]="packages"
   [numVisible]="4"
   [numScroll]="4"
   [showIndicators]="false"
+  headerText=""
 >
-  <ng-template let-image pTemplate="item">
+  <ng-template let-packages pTemplate="item">
     <div class="p-card">
       <mat-chip class="price">
-        <span class="rating-text">{{ packages.price }}</span>
+        <span class="price-text">{{ packages.price }}</span>
       </mat-chip>
-      <button class="heart-btn" (click)="image.liked = !image.liked">
-        <i [ngClass]="{'fa-solid fa-heart fa-lg': image.liked, 'fa-regular fa-heart fa-lg': !image.liked}" 
-           [ngStyle]="{'color': image.liked ? '#ff0000' : '#ffffff'}"></i>
+      <button class="heart-btn" (click)="packages.liked = !packages.liked">
+        <i
+          [ngClass]="{
+            'fa-solid fa-heart fa-lg': packages.liked,
+            'fa-regular fa-heart fa-lg': !packages.liked
+          }"
+          [ngStyle]="{ color: packages.liked ? '#ff0000' : '#ffffff' }"
+        ></i>
       </button>
       <img
         [src]="packages.src"
         alt="{{ packages.title }}"
         class="p-card-image my-image"
       />
+
       <div class="p-card-header">
         <div class="p-card-title">{{ packages.title }}</div>
-        <div class="p-card-place">
+        <div class="p-card-place-details">
+          <div>
+            <i class="fa-solid fa-location-dot" style="color: #3f51b5"></i>
+            {{ packages.country }}
+          </div>
+          <div>
+            <i class="fa-solid fa-calendar" style="color: #3f51b5"></i>
+            {{ packages.package }}
+          </div>
+          <div>
+            <i class="fa-solid fa-user-group" style="color: #3f51b5"></i>
+            People: {{ packages.pax }}
+          </div>
+        </div>
 
+        <div class="p-card-rating">
+          <div>
+            <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+              <i class="fa-solid fa-star" style="color: #fcc24c"></i>
+            </ng-container>
+            5.0
+          </div>
+          <div>({{ packages.reviews }} Reviews)</div>
+        </div>
+        <div class="p-card-description">
+          {{ packages.description }}
+        </div>
+        <div class="p-card-btn">
+          <button mat-fab extended color="primary" id="book-btn">Book Now</button>
         </div>
       </div>
+      
     </div>
   </ng-template>
-</p-carousel> -->
+</p-carousel>
+

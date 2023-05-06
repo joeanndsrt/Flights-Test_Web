@@ -1,0 +1,5 @@
+<div class="picture-row">
+  <div *ngFor="let picture of pictures; let i = index" class="picture-container" (mouseover)="setEnlarged(i)" (mouseout)="resetEnlarged()">
+    <img [src]="picture.src" [class.enlarged]="i === enlargedIndex">
+  </div>
+</div>
