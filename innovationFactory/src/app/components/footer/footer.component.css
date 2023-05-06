@@ -1,30 +1,118 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-footer{
-    width: 100%;
-    padding: 20px 50px;
+.footer-banner {
+  background-image: url(../../../assets/images/footer-banner.png);
+  width: 100%;
+  height: 150px;
+  background-size: 45%;
+  display: flex;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1250px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1350px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: .9rem;
+}
+
+.footer-links .sec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer-links .sec ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links .sec ul li {
+  margin: 0 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-links .sec p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.banner-left {
+  color: #fff;
+}
+
+.banner-left h1 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.banner-left p {
+  font-size: 0.9rem;
+}
+
+#email-icon {
+  color: #fff;
+}
+
+.email-icon-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  border-radius: 30px;
+  width: 80px;
+  height: 50px;
+  background-color: #3f51b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-input-icon-right input {
+  border-radius: 30px;
+  width: 400px;
+  padding: 10px;
+  height: 70px;
+}
+
+.socmed-icons{
+    border: 1px solid #404d522c;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
-    justify-content: space-between;
-    background-color: #ECFBFA;
+  justify-content: center;
+  align-items: center;
 }
 
-footer .sec{
-    width: 30%;
-}
-
-footer .sec:nth-child(1), .sec:nth-child(2){
-    padding-left: 40px;
-}
-
-footer ul{
-    display: flex;
-}
-
-footer ul li{
-    margin-left: 10px;
+#company{
+    color: #3f51b5;
+    font-weight: bold;
 }

@@ -1,0 +1,65 @@
+.container{
+    background-image: url(../../../assets/images/about-us-banner.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    height: 800px;
+    background-size: 80%;
+    background-position-x: 210px;
+}
+
+.content-container{
+    max-width: 600px;
+    margin-right: 100px;
+}
+
+.text-container h1{
+    font-size: 2.4rem;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.text-container p{
+    margin-top: 20px;
+    color: #404d52b7;
+    font-style: italic;
+    font-size: 1.1rem;
+    width: 70%;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3f51b5;
+  }
+
+  .icon-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-container span{
+    font-size: .9rem;
+  }
+  
+  #name{
+    font-weight: bold;
+    margin: 10px;
+  }
+  
+  #title{
+    color: #404d52b7;
+    margin: 10px;
+  }  
+  
+  .fa-star {
+    font-size: .8rem;
+    margin-top: 10px;
+  }
+  
+  
+
+  

@@ -1,12 +1,5 @@
-<div class="container">
+<div [ngClass]="{'container': isHomeRoute()}" scrollable>
   <app-header></app-header>
-  <app-home></app-home>
-  <app-search></app-search>
-  <app-partners></app-partners>
-  <app-about></app-about>
-  <app-experience></app-experience>
-  <app-places></app-places>
-  <app-packages></app-packages>
-  <app-featured></app-featured>
+  <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

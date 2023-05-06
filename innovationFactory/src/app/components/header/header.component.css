@@ -3,12 +3,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
 } 
+
+.transparent-header a{
+    color:  #fff;
+}
+
+.white-header a{
+    color: black;
+}
 
 header{
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +23,10 @@ header{
 }
 
 header ul{
+    display: flex;
+}
+
+.login-group{
     display: flex;
 }
 
@@ -45,3 +56,36 @@ header ul li{
     font-size: 1.6rem;
     margin-bottom: -5px;
 }
+
+#register{
+    margin-right: 10px;
+    height: 30px;
+    width: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#login{
+    height: 30px;
+    width: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#login i{
+    margin-right: 10px;
+}
+
+.login-group{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.active-link {
+    border: 1px solid #3F51B5;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  

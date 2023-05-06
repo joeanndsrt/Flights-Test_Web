@@ -7,26 +7,34 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { SearchComponent } from './components/search/search.component';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatSelectModule } from '@angular/material/select';
-import { MatChipsModule } from '@angular/material/chips';
 import { FlightsTabComponent } from './components/flights-tab/flights-tab.component';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatMenuModule } from '@angular/material/menu';
 import { AboutComponent } from './components/about/about.component';
 import { PartnersComponent } from './components/partners/partners.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { PlacesComponent } from './components/places/places.component';
-import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PackagesComponent } from './components/packages/packages.component';
 import { PackagesCarouselComponent } from './components/packages-carousel/packages-carousel.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { PicColumnComponent } from './components/pic-column/pic-column.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
+import { CarouselModule } from 'primeng/carousel';
+import { AvatarModule } from 'primeng/avatar';
+import { InputTextModule } from 'primeng/inputtext';
+
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -46,7 +54,10 @@ import { PicColumnComponent } from './components/pic-column/pic-column.component
     PackagesComponent,
     PackagesCarouselComponent,
     FeaturedComponent,
-    PicColumnComponent
+    PicColumnComponent,
+    AboutUsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +70,11 @@ import { PicColumnComponent } from './components/pic-column/pic-column.component
     MatChipsModule,
     MatDividerModule,
     MatMenuModule,
-    CarouselModule
+    CarouselModule,
+    AvatarModule,
+    InputTextModule,
+    ScrollingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
