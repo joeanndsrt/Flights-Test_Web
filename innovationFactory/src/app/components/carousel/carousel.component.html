@@ -1,0 +1,31 @@
+<p-carousel
+  [value]="images"
+  [numVisible]="3"
+  [numScroll]="3"
+  [showIndicators]="false"
+>
+  <ng-template let-image pTemplate="item">
+    <div class="p-card">
+      <mat-chip class="rating">
+        <i matChipAvatar class="fa-solid fa-star" style="color: #FCC24C;"></i>
+        <span class="rating-text">{{ image.rating }}</span>
+      </mat-chip>
+      <button class="heart-btn" (click)="image.liked = !image.liked">
+        <i [ngClass]="{'fa-solid fa-heart fa-lg': image.liked, 'fa-regular fa-heart fa-lg': !image.liked}" 
+           [ngStyle]="{'color': image.liked ? '#ff0000' : '#ffffff'}"></i>
+      </button>
+      <img
+        [src]="image.src"
+        alt="{{ image.title }}"
+        class="p-card-image my-image"
+      />
+      <div class="p-card-header">
+        <div class="p-card-title" [ngStyle]="{'margin-top': image.price ? '-60px' : '-40px'}">{{ image.title }}</div>
+        <div class="p-card-price" *ngIf="image.price">
+          <span class="price-text">{{ image.price }}</span>
+          <span class="price-unit">/Per Person</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

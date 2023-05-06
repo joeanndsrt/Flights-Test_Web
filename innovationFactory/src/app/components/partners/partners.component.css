@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.img-container {
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+img {
+  max-width: 12%;
+  height: auto;
+  margin: 5px;
+  filter: grayscale(100%);
+}

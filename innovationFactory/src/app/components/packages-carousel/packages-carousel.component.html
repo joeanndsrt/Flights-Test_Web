@@ -1,0 +1,29 @@
+<!-- <p-carousel
+  [value]="packages"
+  [numVisible]="4"
+  [numScroll]="4"
+  [showIndicators]="false"
+>
+  <ng-template let-image pTemplate="item">
+    <div class="p-card">
+      <mat-chip class="price">
+        <span class="rating-text">{{ packages.price }}</span>
+      </mat-chip>
+      <button class="heart-btn" (click)="image.liked = !image.liked">
+        <i [ngClass]="{'fa-solid fa-heart fa-lg': image.liked, 'fa-regular fa-heart fa-lg': !image.liked}" 
+           [ngStyle]="{'color': image.liked ? '#ff0000' : '#ffffff'}"></i>
+      </button>
+      <img
+        [src]="packages.src"
+        alt="{{ packages.title }}"
+        class="p-card-image my-image"
+      />
+      <div class="p-card-header">
+        <div class="p-card-title">{{ packages.title }}</div>
+        <div class="p-card-place">
+
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel> -->

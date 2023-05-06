@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-end; 
+    height: 800px;
+    background-image: url('../../../assets/images/experience-banner.jpg');
+    background-repeat: no-repeat;
+    background-position-y: -90px;
+    background-position-x: -120px;
+    background-size: 115%;
+  }
+  
+  .contents {
+    width: 50%;
+
+  }
+  
+  .contents div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .contents h1{
+    font-size: 3.5rem;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .contents p{
+    color: #404d52b7;
+    font-size: 1.2rem;
+    width: 70%;
+  }
+
+  .group-container{
+
+    width: 75%;
+  }
+
+  .group{
+    width: 15%;
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+
+  .group h3{
+    color: #3f51b5;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+  }
+
+  .group p{
+    font-size: .8rem;
+    margin: 0;
+    width: 70%;
+  }
+  
+  mat-divider{
+    height: 40px;
+    align-self: center;
+    margin-left: -50px;
+  }

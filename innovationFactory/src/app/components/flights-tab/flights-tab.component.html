@@ -1,0 +1,142 @@
+<div class="btn-group">
+  <form>
+    <div class="select-container">
+      <select class="select-class">
+        <option value="Business">Business</option>
+        <option value="Economy">Economy</option>
+      </select>
+    </div>
+    <div class="chip-container">
+      <mat-chip-listbox aria-label="Trip selection" class="trip-btns">
+        <mat-chip-option value="One Way">One Way</mat-chip-option>
+        <mat-chip-option value="Round Trip">Round Trip</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="field-container">
+      <div class="form-group">
+        <label for="FlyingFrom">Flying from</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <mat-icon color="primary">flight_takeoff</mat-icon>
+            </span>
+          </div>
+          <button type="button" mat-button [matMenuTriggerFor]="menu1">
+            {{ selectedCity || "Select city" }}
+          </button>
+          <mat-menu #menu1="matMenu" yPosition="below">
+            <div class="city-menu">
+              <div
+                class="city-option"
+                *ngFor="let city of cities"
+                (click)="selectCity(city.name)"
+              >
+                {{ city.name }}
+              </div>
+            </div>
+          </mat-menu>
+        </div>
+      </div>
+
+      <i class="fa-solid fa-right-left" style="color: #71767c"></i>
+
+      <div class="form-group">
+        <label for="FlyingTo">Flying to</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <mat-icon color="primary">flight_land</mat-icon>
+            </span>
+          </div>
+          <button type="button" mat-button [matMenuTriggerFor]="menu1">
+            {{ selectedCity || "Select city" }}
+          </button>
+          <mat-menu #menu2="matMenu" yPosition="below">
+            <div class="city-menu">
+              <div
+                class="city-option"
+                *ngFor="let city of cities"
+                (click)="selectCity(city.name)"
+              >
+                {{ city.name }}
+              </div>
+            </div>
+          </mat-menu>
+        </div>
+      </div>
+
+      <mat-divider [vertical]="true" class="divider1"></mat-divider>
+
+      <div class="form-group">
+        <label for="departure">Departure</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa-solid fa-calendar" style="color: #3f51b5"></i>
+            </span>
+          </div>
+          <input
+            type="date"
+            class="form-control"
+            id="departure"
+            name="departure"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="return">Return</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa-solid fa-calendar" style="color: #3f51b5"></i>
+            </span>
+          </div>
+          <input type="date" class="form-control" id="return" name="return" />
+        </div>
+      </div>
+
+      <mat-divider [vertical]="true" class="divider2"></mat-divider>
+
+      <div class="form-group">
+        <label for="passengers">Travellers</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa-solid fa-user-group" style="color: #3f51b5"></i>
+            </span>
+          </div>
+          <button type="button" mat-button [matMenuTriggerFor]="menu">
+            {{ numAdults }} Adults, {{ numChildren }} Children
+          </button>
+          <mat-menu #menu="matMenu">
+            <div class="passengers-menu">
+              <div class="passenger-type">
+                <div>Adults</div>
+                <div class="passenger-count">
+                  <button mat-button (click)="decrement('adult')">-</button>
+                  <div>{{ numAdults }}</div>
+                  <button mat-button (click)="increment('adult')">+</button>
+                </div>
+              </div>
+              <div class="passenger-type">
+                <div>Children</div>
+                <div class="passenger-count">
+                  <button mat-button (click)="decrement('child')">-</button>
+                  <div>{{ numChildren }}</div>
+                  <button mat-button (click)="increment('child')">+</button>
+                </div>
+              </div>
+            </div>
+          </mat-menu>
+        </div>
+      </div>
+
+      <button type="submit" id="search-btn">
+        <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+        Search
+      </button>
+    </div>
+  </form>
+</div>
