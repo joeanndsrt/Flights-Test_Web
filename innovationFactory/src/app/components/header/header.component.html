@@ -1,4 +1,4 @@
-<header class="transparent-header" *ngIf="router.url === '/'">
+<header class="transparent-header" *ngIf="router.url === '/' && !hasUser">
   <div>
     <ul>
       <li><a href="#" (click)="scrollToSection('about-us')">About</a></li>
@@ -21,7 +21,7 @@
   </div>
 </header>
 
-<header class="white-header" *ngIf="router.url !== '/'">
+<header class="white-header" *ngIf="router.url !== '/' && !hasUser">
   <div>
     <ul>
       <li><a href="#" (click)="scrollToSection('about-us')">About</a></li>
@@ -32,7 +32,24 @@
     </ul>
   </div>
   <div class="login-group">
-    <div id="register" routerLink="/register" routerLinkActive="active-link">Register</div>
-    <div id="login" routerLink="/login" routerLinkActive="active-link"><i class="fa-solid fa-user" style="color:#3F51B5"></i>Login</div>
+    <div id="register" (click)="toggleComponentRegister()" [ngClass]="{ 'active-link': !showComponent}">Register</div>
+    <div id="login" (click)="toggleComponentLogin()" [ngClass]="{ 'active-link': showComponent}"><i class="fa-solid fa-user" style="color:#3F51B5"></i>Login</div>
+  </div>  
+</header>
+
+<header class="user-header" *ngIf="router.url === '/' && hasUser">
+  <div>
+    <ul>
+      <li><a href="#" (click)="scrollToSection('about-us')">About</a></li>
+      <li><a href="#" (click)="scrollToSection('packages')">Packages</a></li>
+      <li><a href="#" (click)="scrollToSection('news')">News</a></li>
+      <li><a href="#" (click)="scrollToSection('partners')">Partners</a></li>
+      <li><a href="#" (click)="scrollToSection('contact')">Contacts</a></li>
+    </ul>
+  </div>
+  <div class="login-group">
+    <div id="logout" (click)="logout()">Logout</div>
+    <p-avatar  image="../../../assets/images/avatar.png"
+    styleClass="mr-2" size="medium" [style]="{ 'background-color': '#3F51B5', color: '#ffffff' }" shape="circle"></p-avatar>
   </div>  
 </header>

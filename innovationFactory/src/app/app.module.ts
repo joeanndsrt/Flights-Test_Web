@@ -35,7 +35,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
-
+import { CheckboxModule } from 'primeng/checkbox';
+import { CardModule } from 'primeng/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MessagesModule } from 'primeng/messages';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -57,7 +61,8 @@ import { FormsModule } from '@angular/forms';
     PicColumnComponent,
     AboutUsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +79,11 @@ import { FormsModule } from '@angular/forms';
     AvatarModule,
     InputTextModule,
     ScrollingModule,
-    FormsModule
+    FormsModule,
+    CheckboxModule,
+    CardModule,
+    HttpClientModule,
+    MessagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

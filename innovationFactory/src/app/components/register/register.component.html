@@ -1,1 +1,81 @@
-<p>register works!</p>
+<div class="register-header">
+    <h1>Register for New User</h1>
+  </div>
+
+  <div class="register-input">
+    <div class="input-form">
+      <label htmlFor="name">Full Name<span>*</span></label>
+      <input
+        type="text"
+        id="name"
+        aria-describedby="username-help"
+        [(ngModel)]="inputName"
+        name="inputName"
+        placeholder="Full Name"
+        required
+      />
+    </div>
+    <div class="input-form">
+      <label htmlFor="name">Phone Number<span>*</span></label>
+      <input
+        type="number"
+        id="phoneNumber"
+        aria-describedby="phoneNumber-help"
+        [(ngModel)]="inputNumber"
+        name="inputNumber"
+        placeholder="Phone Number"
+        required
+      />
+    </div>
+    <div class="input-form">
+        <label htmlFor="username">Email<span>*</span></label>
+        <input
+          type="email"
+          id="email"
+          aria-describedby="username-help"
+          [(ngModel)]="inputEmail"
+          name="inputEmail"
+          placeholder="example@gmail.com"
+          required
+        />
+      </div>
+    <div class="input-form">
+      <label htmlFor="password">Password<span>*</span></label>
+      <input
+        type="password"
+        id="password"
+        aria-describedby="password-help"
+        [(ngModel)]="inputPassword"
+        name="inputPassword"
+        placeholder="********"
+        required
+      />
+    </div>
+    <div class="input-form">
+        <label htmlFor="password">Confirm Password<span>*</span></label>
+        <input
+          type="password"
+          id="confirm-password"
+          aria-describedby="password-help"
+          [(ngModel)]="inputConfirmPassword"
+          name="inputConfirmPassword"
+          placeholder="********"
+          required
+        />
+      </div>
+
+    <div class="checkbox-container">
+      <p-checkbox
+        id="agree"
+        name="agree"
+        value="agree"
+        [(ngModel)]="agree"
+      ></p-checkbox>
+      <label for="agree">I agree To The Terms Of Service and Privacy Policy</label>
+    </div>
+    <button mat-button (click)="onSubmit()" id="register-btn">Register</button>
+    <p id="registeracc">
+      Already Have An Account?
+      <a class="login-link" (click)="showLoginComponent()">Log In</a>
+    </p>
+  </div>

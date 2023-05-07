@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'innovationFactory';
+  showLogin = true;
+  showRegister = false;
 
   constructor(private router: Router) { }
   

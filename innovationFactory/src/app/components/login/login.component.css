@@ -1,0 +1,120 @@
+
+
+.login-header{
+  color: #3F51B5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-header h1{
+  font-size: 25px;
+}
+
+.login-header div{
+  height: 6vh;
+  width: 6vh;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DEE2E6;
+  margin-bottom: 12px;
+}
+
+.login-input{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-form label{
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.input-form input {
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+
+.input-form input.error-input {
+  border: 1px solid red;
+}
+
+
+
+.input-form span{
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+p-checkbox {
+  margin-right: 10px;
+  margin-top: 0;
+}
+
+label[for="remember"] {
+  margin-top: 0;
+  color: #404d52b7;
+  font-size: 14px;
+}
+
+.forgot-password-link {
+  margin-left: auto;
+  color: #3F51B5;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#login-btn{
+  background-color: #3F51B5;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  width: 130px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.create-acc-link {
+  color: #3F51B5;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#createacc{
+  text-align: center;
+  color: #404d52b7;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.p-message {
+  z-index: 9999;
+}
+
+.error-container{
+  float: right;
+  width: 38%;
+  position: absolute;
+  right: 0;
+}
