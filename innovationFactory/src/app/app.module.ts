@@ -40,7 +40,9 @@ import { CardModule } from 'primeng/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MessagesModule } from 'primeng/messages';
 import { UserComponent } from './components/user/user.component';
-
+import { VerificationComponent } from './components/verification/verification.component';
+import { DialogModule } from 'primeng/dialog';
+import { NgOtpInputModule } from 'ng-otp-input'
 
 @NgModule({
   declarations: [
@@ -62,7 +64,8 @@ import { UserComponent } from './components/user/user.component';
     AboutUsComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    VerificationComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +86,9 @@ import { UserComponent } from './components/user/user.component';
     CheckboxModule,
     CardModule,
     HttpClientModule,
-    MessagesModule
+    MessagesModule,
+    DialogModule,
+    NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

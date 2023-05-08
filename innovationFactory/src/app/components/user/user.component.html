@@ -2,11 +2,16 @@
   <div class="error-container">
     <p-messages></p-messages>
   </div>
+  <div *ngIf="isVerified">
+      <app-verification
+    ></app-verification>
+  </div>
   <div class="container">
     <div class="contents-container">
       <div class="content">
         <app-login *ngIf="show"
           (error)="handleLoginError($event)"
+          (verify)="handleVerification($event)"
         ></app-login>
         <app-register *ngIf="!show"
         (error)="handleLoginError($event)"

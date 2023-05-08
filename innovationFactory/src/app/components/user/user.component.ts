@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { SharedService } from '../../services/shared.service';
 
@@ -10,6 +10,7 @@ import { SharedService } from '../../services/shared.service';
 })
 export class UserComponent {
   show = false;
+  isVerified: boolean = false;
 
   constructor(
     private messageService: MessageService,
@@ -25,5 +26,11 @@ export class UserComponent {
   handleLoginError(message: any) {
     this.messageService.add(message);
   }
+
+  handleVerification(verify: boolean) {
+    this.isVerified = verify;
+
+  }
+
 
 }

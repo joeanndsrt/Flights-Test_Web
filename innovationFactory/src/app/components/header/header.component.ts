@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatSelectionListChange } from '@angular/material/list';
 import { SharedService } from '../../services/shared.service';
+import { UserService } from '../../services/user.service';
 
 
 @Component({
@@ -11,22 +12,17 @@ import { SharedService } from '../../services/shared.service';
 })
 export class HeaderComponent {
   public router: Router;
-  @Output() showLogin: EventEmitter<boolean> = new EventEmitter<boolean>();
   showComponent = false;
   hasUser: boolean = false;
 
-  toggleLogin(){
-    this.showLogin.emit(true);
-  }
-
-  constructor(router: Router, private sharedService: SharedService) { 
+  constructor(router: Router, private sharedService: SharedService, private userService: UserService) { 
     this.router = router;
   }
 
   ngOnInit() {
     this.sharedService.showComponent$.subscribe((showComponent) => {
       this.showComponent = showComponent;
-      if (localStorage.getItem('app')) {
+      if (localStorage.getItem('token')) {
         this.hasUser = true;
       }
     });
@@ -37,9 +33,19 @@ export class HeaderComponent {
   }
 
   logout(){
-    localStorage.removeItem('app');
-    this.hasUser = false;
-    this.router.navigate(['/user']);
+    const token = localStorage.getItem('token');
+
+    if (token != null) {
+      this.userService.logout(token).subscribe((result) => {
+        console.log(result);
+      }, (error) => {
+        console.log(error);
+      })
+
+      localStorage.removeItem('token');
+      this.hasUser = false;
+      this.router.navigate(['/user']);
+    }
   }
 
   toggleComponentLogin(){

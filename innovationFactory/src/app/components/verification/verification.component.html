@@ -1,0 +1,23 @@
+<div class="container">
+    <p-dialog [visible]="true" [modal]="true" [style]="{ width: '30vw' }" [draggable]="false" [resizable]="false">
+        <div class="dialog-icon">
+            <img
+                src="../../../assets/images/verifcation.png"
+            />
+            <h1>Verify Code</h1>
+        </div>
+        <div class="dialog-contents">
+            <p>We sent an OTP on your Email</p>
+            <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:6}"></ng-otp-input>
+        </div>
+        <!-- <button mat-button id="validate-btn">
+            Validate
+        </button> -->
+        <div class="error" *ngIf="showError">
+            {{ this.errorMessage }}
+        </div>
+        <div class="count" *ngIf="showCount">
+            {{ this.otpCount }}
+        </div>
+    </p-dialog>
+</div>

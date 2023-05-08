@@ -3,7 +3,6 @@ import { UserService } from '../../services/user.service';
 import { IUser } from '../../interfaces/user';
 import { Router } from '@angular/router';
 import { SharedService } from '../../services/shared.service';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +14,14 @@ export class LoginComponent {
   inputPassword: string = '';
   remember: boolean = false;
   @Output() error = new EventEmitter<any>();
+  @Output() verify: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   user: IUser = {
     email: '',
     password: '',
   };
 
-  constructor(private router: Router, private userService: UserService, private sharedService: SharedService, private location: Location) {}
+  constructor(private userService: UserService, private sharedService: SharedService) {}
 
   showErrorDialog() {
     const message = {
@@ -61,14 +61,8 @@ export class LoginComponent {
       this.userService.login(this.user).subscribe(
         (result) => {
           if (result.status === true) {
-
-            //insert verification then pass app from verification to localStorage
-            localStorage.setItem('app', 'mobile')
-
-            this.router.navigate(['/']).then(() => {
-              this.location.replaceState('/');
-              window.location.reload();
-            });
+            localStorage.setItem('user_id', result.data.user_id);
+            this.verify.emit(true);
           } else {
             this.showErrorDialog();
           }
